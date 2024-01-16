@@ -24,4 +24,14 @@ def merge(L1,L2):
         for k in range(i,len(L1)):
             res.append(L1[k])
     return res
-    
+
+with open('words_to_sort.txt','r') as f:
+    L=[]
+    for ligne in f:
+        L.append(ligne)
+    L=trimerge(L)
+
+with open('word_sorted.txt','w') as f:
+    for ligne in L:
+        f.write(ligne)
+
